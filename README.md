@@ -47,7 +47,6 @@
 ```
 
 ⚙️ Tech Stack
-```
 ### 🛠️ Tech Stack
 
 | Layer | Technology | Role |
@@ -58,7 +57,6 @@
 | **🗄️ Database** | ![Mongo](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) | NoSQL Cloud Storage |
 | **🌐 Proxy** | ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white) | Reverse Proxy & Routing |
 | **🐳 Container** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) | Services Isolation |
-```
 
 📁 Project Structure
 ```
