@@ -46,7 +46,6 @@
 
 ```
 
-⚙️ Tech Stack
 ### 🛠️ Tech Stack
 
 | Layer | Technology | Role |
