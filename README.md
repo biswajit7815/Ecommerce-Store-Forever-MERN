@@ -45,6 +45,8 @@
                      └─────────────────────────┘
 
 ```
+
+⚙️ Tech Stack
 ```
 Layer,Technology,Role
 Frontend,React.js,User-facing SPA
@@ -55,6 +57,7 @@ Proxy,Nginx,Reverse Proxy & Routing
 Container,Docker,Services Isolation
 ```
 
+📁 Project Structure
 ```
 Ecommerce-Store-Forever-MERN/
 ├── 📂 admin/            # Admin Dashboard (React)
@@ -87,4 +90,8 @@ STRIPE_SECRET=your_stripe_key
 PORT=3000
 
 ```
+👨‍💻 Author
+```
+Biswajit Behera
 
+```
