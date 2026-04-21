@@ -81,7 +81,7 @@ docker-compose up -d --build
 ```
 
 1. Technical Debugging Log (Errors Solved)
-```
+
 Category,Problem,Solution
 Routing,Admin panel page refresh led to 404 Not Found.,Configured basename in React Router & updated Vite base path for sub-directory hosting.
 Deployment,vite: not found during Docker build.,Refined Dockerfile layer ordering to copy package.json and install dependencies before source code.
@@ -89,7 +89,6 @@ Authentication,"""Not Authorized"" loop in Admin Panel.",Standardized JWT payloa
 Integration,"Cloudinary ""Invalid Signature"" error.",Synchronized EC2 server time (NTP) and ensured CLOUDINARY_SECRET was correctly injected via environment variables.
 DevOps,Hardcoded API keys in docker-compose.yml.,Implemented professional environment variable substitution (${VAR}) using a root .env file.
 Git/CI,GitHub push rejected (Fetch First error).,Resolved remote/local history conflicts using git pull --rebase and --force push to establish the local server code as the primary source of truth.
-```
 
 🔐 Environment Variables
 ```
