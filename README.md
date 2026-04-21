@@ -82,13 +82,13 @@ docker-compose up -d --build
 
 1. Technical Debugging Log (Errors Solved)
 
-Category,Problem,Solution
-Routing,Admin panel page refresh led to 404 Not Found.,Configured basename in React Router & updated Vite base path for sub-directory hosting.
-Deployment,vite: not found during Docker build.,Refined Dockerfile layer ordering to copy package.json and install dependencies before source code.
-Authentication,"""Not Authorized"" loop in Admin Panel.",Standardized JWT payload (Object vs. String) between Login/Auth middleware; forced re-login for token refresh.
-Integration,"Cloudinary ""Invalid Signature"" error.",Synchronized EC2 server time (NTP) and ensured CLOUDINARY_SECRET was correctly injected via environment variables.
-DevOps,Hardcoded API keys in docker-compose.yml.,Implemented professional environment variable substitution (${VAR}) using a root .env file.
-Git/CI,GitHub push rejected (Fetch First error).,Resolved remote/local history conflicts using git pull --rebase and --force push to establish the local server code as the primary source of truth.
+Category,Challenge,Resolution
+🌐 Routing,404 Errors on Admin page refresh,Implemented basename in React Router & updated Vite base configuration for sub-directory hosting.
+🐳 Deployment,Build failure (vite: not found),Optimized Dockerfile layering: cached package.json install before copying source code.
+🔐 Auth,"""Not Authorized"" middleware loops",Standardized JWT payload (Object format) and enforced token refresh/re-login logic.
+☁️ Integration,"Cloudinary ""Invalid Signature"" error",Synchronized EC2 server clock (NTP) & secured API secret injection via environment variables.
+🛡️ DevOps,Infrastructure Security,Migrated from hardcoded secrets to dynamic ${VAR} substitution in docker-compose.yml.
+🔄 Workflow,Git Merge/Push Conflicts,Resolved remote history divergence via git pull --rebase & forced alignment with local state.
 
 🔐 Environment Variables
 ```
