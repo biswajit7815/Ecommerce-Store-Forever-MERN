@@ -82,13 +82,18 @@ docker-compose up -d --build
 
 1. Technical Debugging Log (Errors Solved)
 
-Category,Challenge,Resolution
-🌐 Routing,404 Errors on Admin page refresh,Implemented basename in React Router & updated Vite base configuration for sub-directory hosting.
-🐳 Deployment,Build failure (vite: not found),Optimized Dockerfile layering: cached package.json install before copying source code.
-🔐 Auth,"""Not Authorized"" middleware loops",Standardized JWT payload (Object format) and enforced token refresh/re-login logic.
-☁️ Integration,"Cloudinary ""Invalid Signature"" error",Synchronized EC2 server clock (NTP) & secured API secret injection via environment variables.
-🛡️ DevOps,Infrastructure Security,Migrated from hardcoded secrets to dynamic ${VAR} substitution in docker-compose.yml.
-🔄 Workflow,Git Merge/Push Conflicts,Resolved remote history divergence via git pull --rebase & forced alignment with local state.
+### 🛠 Engineering Challenges & Resolutions
+
+Below is the technical log of critical issues encountered and resolved during the transition from development to production.
+
+| Category | Challenge | Resolution |
+| :--- | :--- | :--- |
+| 🌐 **Routing** | 404 Errors on Admin page refresh | Implemented `basename` in React Router & updated Vite `base` configuration for sub-directory hosting. |
+| 🐳 **Deployment** | Build failure (`vite: not found`) | Optimized `Dockerfile` layering: cached `package.json` install before copying source code. |
+| 🔐 **Auth** | "Not Authorized" middleware loops | Standardized JWT payload (Object format) and enforced token refresh/re-login logic. |
+| ☁️ **Integration** | Cloudinary "Invalid Signature" error | Synchronized EC2 server clock (NTP) & secured API secret injection via environment variables. |
+| 🛡️ **DevOps** | Infrastructure Security | Migrated from hardcoded secrets to dynamic `${VAR}` substitution in `docker-compose.yml`. |
+| 🔄 **Workflow** | Git Merge/Push Conflicts | Resolved remote history divergence via `git pull --rebase` & forced alignment with local state. |
 
 🔐 Environment Variables
 ```
