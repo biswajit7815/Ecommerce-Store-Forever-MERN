@@ -5,19 +5,16 @@ const adminAuth = async (req, res, next) => {
     const { token } = req.headers;
 
     if (!token) {
-      return res.json({
-        success: false,
-        message: "Not Authorized",
-      });
+      return res.json({ success: false, message: "Not Authorized, Login Again" });
     }
 
+    // Token verify karein
     const tokenDecode = jwt.verify(token, process.env.JWT_SECRET);
 
-    if (tokenDecode !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD) {
-      return res.json({
-        success: false,
-        message: "Not Authorized",
-      });
+    // Check karein ki decoded ID wahi hai jo ADMIN_EMAIL hai
+    // Kyunki adminLogin mein humne { id: email } sign kiya tha
+    if (tokenDecode.id !== process.env.ADMIN_EMAIL) {
+      return res.json({ success: false, message: "Not Authorized, Login Again" });
     }
 
     next();

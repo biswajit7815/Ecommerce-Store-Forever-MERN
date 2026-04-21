@@ -1,6 +1,6 @@
 import userModel from "../models/userModel.js";
 import validator from "validator";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs"; // <--- Yahan change kiya hai
 import jwt from "jsonwebtoken";
 
 const createToken = (id) => {
@@ -97,7 +97,8 @@ const adminLogin = async (req, res) => {
       email === process.env.ADMIN_EMAIL &&
       password === process.env.ADMIN_PASSWORD
     ) {
-      const token = jwt.sign(email + password, process.env.JWT_SECRET);
+      // Yahan change karein: String ki jagah Object { id: email } pass karein
+      const token = jwt.sign({ id: email }, process.env.JWT_SECRET);
 
       res.json({ success: true, token });
     } else {

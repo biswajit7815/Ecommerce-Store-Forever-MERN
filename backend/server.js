@@ -32,6 +32,7 @@ app.get("/", (req, res) => {
   res.send("API WORKING");
 });
 
-app.listen(port, () => {
+// Add '0.0.0.0' as the second argument
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server started at port ${port}`);
 });
