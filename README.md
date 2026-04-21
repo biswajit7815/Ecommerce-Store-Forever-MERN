@@ -1,48 +1,135 @@
 <div align="center">
 
+<br/>
+
 # 🛍️ Ecommerce-Store-Forever-MERN
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=1000&color=00ff00&width=500&lines=Full-Stack+MERN+E-Commerce;AWS+EC2+Infrastructure;Containerized+with+Docker;Production-Ready+Deployment" />
+### Production-Ready · 3-Tier MERN Stack · Fully Dockerized · EC2 Deployed
 
----
+<br/>
 
-### 🏗️ Infrastructure Overview
-This project isn't just about code; it's about **reliable deployment**. It is designed as a production-ready application hosted on AWS EC2, utilizing containerization for environment consistency.
+![Live](https://img.shields.io/badge/Status-Live%20%F0%9F%9F%A2-brightgreen?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-Reverse%20Proxy-009639?style=flat-square&logo=nginx&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=flat-square&logo=react&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-Payments-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-Media-3448C5?style=flat-square&logo=cloudinary&logoColor=white)
 
-<br>
+<br/>
 
-### 🛠️ DevOps Tech Stack
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+> A fully containerized, production-grade E-commerce platform —
+> built with the MERN stack, secured behind Nginx, and deployed on AWS EC2.
 
----
+<br/>
 
-### 🚀 Deployment Architecture
-- **Containerization:** Modular architecture using `Docker` and `Docker-Compose` to manage frontend, backend, and database services.
-- **Environment Management:** Implemented professional **Environment Variable Substitution** (`${VAR_NAME}`) for secure, production-grade configuration handling.
-- **Reverse Proxy:** Configured `Nginx` as a reverse proxy to handle requests, manage SSL/TLS, and improve security.
-- **Cloud Infrastructure:** Deployed on `AWS EC2` with robust monitoring and health checks enabled in `docker-compose.yml`.
+### 🌐 [Live Demo → http://3.111.213.122/](http://3.111.213.122/)
 
----
-
-### ⚙️ DevOps Workflow
-1. **Infrastructure as Code (IaC):** Utilized Docker-Compose to define multi-container environments.
-2. **Security:** Managed secrets and sensitive API keys using environment substitution instead of hardcoding.
-3. **Availability:** Configured `restart: unless-stopped` policies and `healthchecks` to ensure system uptime.
-4. **Efficiency:** Optimized Docker images with multi-stage builds (where applicable) to reduce deployment footprint.
-
----
-
-### 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=biswajit7815&show_icons=true&theme=radical&hide_border=true)
-
-<br>
-
-### 🌐 Connect with me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN_USERNAME)
+<br/>
 
 </div>
+
+---
+
+## 📌 Table of Contents
+
+- [Architecture](#-architecture)
+- [Tech Stack](#-tech-stack)
+- [Key Features](#-key-features)
+- [Project Structure](#-project-structure)
+- [Docker Setup](#-docker-setup)
+- [Nginx Configuration](#-nginx-configuration)
+- [Environment Variables](#-environment-variables)
+- [Running Locally](#-running-locally)
+- [Author](#-author)
+
+---
+## 🏛️ Architecture
+┌───────────────────────────────┐
+             │        User / Admin           │
+             │          Browser              │
+             └──────────────┬────────────────┘
+                            │ HTTP (Port 80/443)
+                            ▼
+             ┌───────────────────────────────┐
+             │       🌐  Nginx Reverse Proxy │
+             │    Single Entry Point & SSL   │
+             └────┬──────────┬───────────┬───┘
+                  │ /        │ /api      │ /admin
+                  ▼          ▼           ▼
+       ┌──────────────┐ ┌──────────┐ ┌──────────────┐
+       │  🖥 Frontend  │ │ ⚙ Backend│ │ 🛠 Admin Panel│
+       │  (React)     │ │ (Node)   │ │  (React)     │
+       └──────────────┘ └────┬─────┘ └──────────────┘
+                             │
+                             ▼
+                 ┌─────────────────────────┐
+                 │     🗄 MongoDB Atlas    │
+                 │  (Cloud Managed DB)     │
+                 └─────────────────────────┘
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology | Role |
+|-------|-----------|------|
+| 🖥️ Frontend | React.js | User-facing SPA |
+| 🛠️ Admin | React.js | Admin Management Dashboard |
+| ⚙️ Backend | Node.js + Express | REST API Server |
+| 🗄️ Database | MongoDB Atlas | NoSQL Cloud Storage |
+| 🌐 Proxy | Nginx | Reverse Proxy & Routing |
+| 🐳 Container | Docker | Services Isolation |
+| ☁️ Media | Cloudinary | Asset Management |
+
+---
+
+## 🔥 Key Features
+
+- **DevOps-First Workflow:** Fully containerized using `docker-compose` with health checks.
+- **Nginx Routing:** Centralized traffic management via Nginx reverse proxy.
+- **Dynamic Config:** Professional variable substitution (`${VAR}`) in Docker Compose.
+- **Secure Auth:** JWT-based stateless authentication.
+- **Cloud-Ready:** Deployed on AWS EC2 with optimized build layers.
+
+---
+
+## 📁 Project Structure
+
+Ecommerce-Store-Forever-MERN/
+├── 📂 admin/            # Admin Dashboard (React)
+├── 📂 backend/          # Node.js Express API
+├── 📂 frontend/         # Customer Frontend (React)
+├── 📂 nginx/            # Nginx Proxy Configuration
+├── 📄 docker-compose.yml # Infrastructure Orchestration
+└── 📄 .env              # Environment Variables
+
+
+---
+
+## 🐳 Docker Setup
+
+### Deploy in Production
+```bash
+# Clone the repository
+git clone [https://github.com/biswajit7815/Ecommerce-Store-Forever-MERN.git](https://github.com/biswajit7815/Ecommerce-Store-Forever-MERN.git)
+
+# Build and start services
+docker-compose up -d --build
+
+```
+
+🔐 Environment Variables
+
+MONGODB_URI=your_mongodb_atlas_uri
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_SECRET_KEY=your_secret
+STRIPE_SECRET=your_stripe_key
+PORT=3000
+
+👨‍💻 Author
+Biswajit Behera — DevOps & Full Stack Engineer
+
