@@ -48,13 +48,16 @@
 
 ⚙️ Tech Stack
 ```
-Layer,Technology,Role
-Frontend,React.js,User-facing SPA
-Admin,React.js,Admin Management Dashboard
-Backend,Node.js + Express,REST API Server
-Database,MongoDB Atlas,NoSQL Cloud Storage
-Proxy,Nginx,Reverse Proxy & Routing
-Container,Docker,Services Isolation
+### 🛠️ Tech Stack
+
+| Layer | Technology | Role |
+| :--- | :--- | :--- |
+| **🖥️ Frontend** | ![React](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=black) | User-facing SPA |
+| **🛠️ Admin** | ![React](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=black) | Dashboard SPA |
+| **⚙️ Backend** | ![Node](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | REST API Server |
+| **🗄️ Database** | ![Mongo](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) | NoSQL Cloud Storage |
+| **🌐 Proxy** | ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white) | Reverse Proxy & Routing |
+| **🐳 Container** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) | Services Isolation |
 ```
 
 📁 Project Structure
@@ -73,7 +76,8 @@ Ecommerce-Store-Forever-MERN/
 Deploy in Production
 ```
 # Clone the repository
-git clone [https://github.com/biswajit7815/Ecommerce-Store-Forever-MERN.git](https://github.com/biswajit7815/Ecommerce-Store-Forever-MERN.git)
+git clone https://github.com/biswajit7815/Ecommerce-Store-Forever-MERN.git
+cd Ecommerce-Store-Forever-MERN
 
 # Build and start services
 docker-compose up -d --build
